@@ -41,7 +41,7 @@ kubectl apply -f kubernetes-manifests
   
 These steps will deploy the app and set up the necessary infrastructure on GKE.
 
-Please note that your cloudbuild.yaml file includes steps to update the backend and frontend simultaneously. This is achieved by duplicating the steps and modifying the args accordingly.
+Please note that the cloudbuild.yaml file includes steps to update the backend and frontend simultaneously. This is achieved by duplicating the steps and modifying the args accordingly.
 
 ## CI/CD Pipeline
 The implementation of the CI/CD pipeline for this app had its challenges, particularly related to service account permissions. Ensuring that the service account used by the CI/CD pipeline had the necessary permissions to access resources such as GKE and other services was a crucial step.
