@@ -21,23 +21,23 @@ While these services can be deployed individually, all of them need to be runnin
 
 #### Open a Command Prompt on your system.
 #### Initialize the Google Cloud SDK by running the following command:
-gcloud init
+`gcloud init`
 #### Install the GCloud Auth Plugin by running the following command:
-gcloud components install gke-gcloud-auth-plugin
+`gcloud components install gke-gcloud-auth-plugin`
 #### Navigate to the folder where you have all the source code and Dockerfile using the following command:
-cd C:\Users\benny\OneDrive\Documents\SIT323
+`cd C:\Users\benny\OneDrive\Documents\SIT323\sit323_737_2023-t1-prac10d\src\backend`
 #### Build the Docker image by running the following command:
-docker build -t gcr.io/sit323-388410/node-web-app:latest .
+`docker build -t gcr.io/sit323-388410/backend:latest .`
 #### Push the Docker image to the Google Container Registry (gcr) by running the following command:
-docker push gcr.io/sit323-388410/node-web-app:latest
+`docker push gcr.io/sit323-388410/backend:latest`
 #### Install kubectl if it's not already installed:
-gcloud components install kubectl
+`gcloud components install kubectl`
 #### Create the cluster on Google Kubernetes Engine (GKE) by running the following command:
-gcloud container clusters create-auto hello-cluster --region=us-west1
+`gcloud container clusters create-auto hello-cluster --region=us-west1`
 #### Connect to the cluster by running the following command:
-gcloud container clusters get-credentials hello-cluster --region=us-west1
+`gcloud container clusters get-credentials hello-cluster --region=us-west1`
 #### Create the deployment on the cluster by applying the Kubernetes manifests using the following command:
-kubectl apply -f kubernetes-manifests
+`kubectl apply -f kubernetes-manifests`
   
 These steps will deploy the app and set up the necessary infrastructure on GKE.
 
