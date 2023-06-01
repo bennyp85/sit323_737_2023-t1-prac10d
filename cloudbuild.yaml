@@ -44,11 +44,3 @@ steps:
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
       - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
-
-options:
-  # Configure GitHub integration
-  source:
-    repoSource:
-      projectId: ${PROJECT_ID}
-      repoName: 'sit323_737_2023-t1-prac10d'
-      branchName: 'master'
