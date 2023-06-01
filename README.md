@@ -52,5 +52,5 @@ While the implementation process required some trial and error, the CI/CD pipeli
 
 
 ## Conclusion
-The Node.js Calculator Web App is a cloud-native microservice-based application deployed on GKE. With the CI/CD pipeline in place, the app benefits from automated building, testing, and deployment processes. The deployment environment did not require the use of scaffolds. The challenges faced during the implementation of the CI/CD pipeline, including service account permissions and the use of an Autopilot cluster, were overcome to ensure a smooth deployment process.
+The Node.js Calculator Web App is a cloud-native microservice-based application deployed on GKE. With the CI/CD pipeline in place, the app benefits from automated building, testing, and deployment processes. The deployment environment did not require the use of scaffold.yaml files.
   
