@@ -17,37 +17,28 @@ MongoDB Database: This ClusterIP service is the database for the app. It stores 
 While these services can be deployed individually, all of them need to be running for the full functionality of the app.
 
 ## Deployment
-To deploy the Node.js Calculator Web App, follow these steps:
+### To deploy the Node.js Calculator Web App, follow these steps:
 
-Open a Command Prompt on your system.
-
-Initialize the Google Cloud SDK by running the following command:
-
+#### Open a Command Prompt on your system.
+#### Initialize the Google Cloud SDK by running the following command:
 gcloud init
-Install the GCloud Auth Plugin by running the following command:
-
+#### Install the GCloud Auth Plugin by running the following command:
 gcloud components install gke-gcloud-auth-plugin
-Navigate to the folder where you have all the source code and Dockerfile using the following command:
-
-cd <path-to-folder>
-Build the Docker image by running the following command:
-
+#### Navigate to the folder where you have all the source code and Dockerfile using the following command:
+cd C:\Users\benny\OneDrive\Documents\SIT323
+#### Build the Docker image by running the following command:
 docker build -t gcr.io/sit323-388410/node-web-app:latest .
-Push the Docker image to the Google Container Registry (gcr) by running the following command:
-
+#### Push the Docker image to the Google Container Registry (gcr) by running the following command:
 docker push gcr.io/sit323-388410/node-web-app:latest
-Install kubectl if it's not already installed:
-
+#### Install kubectl if it's not already installed:
 gcloud components install kubectl
-Create the cluster on Google Kubernetes Engine (GKE) by running the following command:
-
+#### Create the cluster on Google Kubernetes Engine (GKE) by running the following command:
 gcloud container clusters create-auto hello-cluster --region=us-west1
-Connect to the cluster by running the following command:
-
+#### Connect to the cluster by running the following command:
 gcloud container clusters get-credentials hello-cluster --region=us-west1
-Create the deployment on the cluster by applying the Kubernetes manifests using the following command:
-
+#### Create the deployment on the cluster by applying the Kubernetes manifests using the following command:
 kubectl apply -f kubernetes-manifests
+  
 These steps will deploy the app and set up the necessary infrastructure on GKE.
 
 Please note that your cloudbuild.yaml file includes steps to update the backend and frontend simultaneously. This is achieved by duplicating the steps and modifying the args accordingly.
