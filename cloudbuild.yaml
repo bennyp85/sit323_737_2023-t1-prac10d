@@ -28,7 +28,7 @@ steps:
       - 'set'
       - 'image'
       - 'deployment/nodejs-calculator-frontend'
-      - 'mynode=gcr.io/${PROJECT_ID}/frontend:$COMMIT_SHA'
+      - 'frontend=gcr.io/${PROJECT_ID}/frontend:$COMMIT_SHA'
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
       - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
@@ -38,10 +38,7 @@ steps:
       - 'set'
       - 'image'
       - 'deployment/nodejs-calculator-backend'
-      - 'mynode=gcr.io/${PROJECT_ID}/backend:$COMMIT_SHA'
+      - 'backend=gcr.io/${PROJECT_ID}/backend:$COMMIT_SHA'
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
       - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
-
-options:
-  logging: CLOUD_LOGGING_ONLY
